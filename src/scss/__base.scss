@@ -1,0 +1,147 @@
+$main-font: "Quicksand", sans-serif;
+
+:root{
+    --green-text: #3BB77E;
+    --green-light-bg: #D7F2E7;
+    --navy-text: #253D4E;
+    --gray-light-text: #F1F1F1;
+    --yellow-text: #FDC643;
+    --green-btn: #DEF9EC;
+    --text: #121212;
+    --text-darkblue: #253D4E;
+    --gray-text: #7e7e7e;
+    --gray-light-text: #9c9c9c;
+    --text-seperator: #e5e5e5;
+    --line-seperator: #ececec;
+    --line-green: #D8F1E5;
+    --red-color: #fc2738;
+    --sale-bg: #e06a6a;
+    --sale-bg-light: #e49191;
+    --gray-border: #ececec;
+}
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section-header{
+    font-family: $main-font;
+    // font-size: ;
+    font-weight: 700;
+    color: var(--navy-text);
+    font-size: 1.5rem;
+
+}
+
+.page-margin{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.section-margin{ 
+    margin: .8rem 0 .4rem 0;
+}
+.header-margin{
+    margin-bottom: 1rem;
+}
+
+.transition-fast{
+    transition: all .3s;
+}
+.transition-medium{
+    transition: all .8s;
+}
+.transition-slow{
+    transition: all 1s;
+}
+
+
+.box-shadow-style{
+    box-shadow:
+    1px 0 1px 0px rgba(0, 0, 0, .15),    /* Right shadow */
+    -1px 0 1px 0px rgba(0, 0, 0, .15),   /* Left shadow */
+    0 1px 1px 0px rgba(0, 0, 0, .15),     /* Bottom shadow */
+    0 -1px 1px 0px rgba(0, 0, 0, .15);
+    border-radius: .3rem;
+}
+
+.btn-normal{
+    box-sizing: border-box;
+    background-color: var(--green-text);
+    color: white;
+    font-family: $main-font;
+    border: 1px solid transparent;
+    padding: .3rem .5rem;
+    border-radius: 4px;
+    &:hover{
+        background-color: white;
+        border:1px solid var(--green-text);
+        color: var(--green-text);
+    }
+}
+.btn-login{
+    background-color: var(--navy-text);
+    padding: .5rem .9rem;
+    border-radius: .8rem;
+    border: none;
+    color: white;
+    font-weight: 700;
+    min-width: 130px;
+}
+.input-normal{
+    display: block;
+    width: 100%;
+    border: 1px solid var(--gray-border);
+    border-radius: .7rem;
+    padding: .9rem 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--gray-text);
+    outline: none;
+     transition: all .8s;
+    &:focus{
+        outline: 1px solid var(--green-text);
+    }
+}
+
+
+
+// Animation
+@keyframes fadeIn {
+    from{ 
+        opacity: 0;
+    }
+    to{ 
+        opacity: 1;
+    }
+}
+@keyframes zoomUp {
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes slideUp {
+    from{
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+    to{
+        opacity: 1;
+        transform: unset;
+    }
+}
+@keyframes modalSlideUp {
+    from{
+        opacity: 0;
+        transform: translate(-50%, calc(-50% + 1rem));
+    }
+    to{
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}

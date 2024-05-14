@@ -1,0 +1,144 @@
+@import './__base.scss';
+@mixin mobile{
+    @media only screen and (max-width: 767px){
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media only screen and (min-width: 768px) and (max-width: 991px){
+        @content;
+    }
+}
+
+@mixin handDevice{
+     @media only screen and (max-width: 991px){
+        @content;
+    }
+}
+
+// TEXT ----------------
+@mixin section-header{
+    font-family: $main-font;
+    // font-size: ;
+    font-weight: 700;
+    color: var(--navy-text);
+    font-size: 1.5rem;
+}
+
+@mixin name-style{
+    font-family: $main-font;
+    font-size: .9rem;
+    font-weight: 700;
+    color: var(--navy-text);
+    &:hover{
+        color: var(--green-text);
+        cursor: pointer;
+    }
+}
+@mixin name-normal{
+    font-family: $main-font;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--navy-text);
+}
+@mixin desc-normal{
+    font-family: $main-font;
+    font-weight: 1rem;
+    color: var(--gray-text);
+
+}
+
+// BUTTONS --------------
+@mixin btn-arrow{
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    color: var(--green-text);
+    // margin-right: .5rem;
+    // padding: 1rem;
+    &:hover{
+        background-color: var(--green-text);
+        color: white;
+    }
+}
+@mixin btn-normal{
+    background-color: var(--green-text);
+    color: white;
+    font-family: $main-font;
+    border: none;
+    padding: .3rem .5rem;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+// ANIMATION -----------
+@mixin transition-fast{
+    transition: all .3s;
+}
+@mixin transition-medium{
+    transition: all .8s;
+}
+@mixin transition-slow{
+    transition: all 1s;
+}
+
+@mixin border-gray{
+    border: 1px solid var(--gray-border);
+    border-radius: 4px;
+}
+
+
+@mixin box-shadow-style{
+    box-shadow:
+    1px 0 1px 0px rgba(0, 0, 0, .15),    /* Right shadow */
+    -1px 0 1px 0px rgba(0, 0, 0, .15),   /* Left shadow */
+    0 1px 1px 0px rgba(0, 0, 0, .15),     /* Bottom shadow */
+    0 -1px 1px 0px rgba(0, 0, 0, .15);
+    border-radius: .3rem;
+}
+
+@mixin minibox-shadow-style{
+    border: 1px solid #ececec;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #0000000d;
+}
+
+@mixin name-height($line){
+    line-height: 1rem;
+    height: 2rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+}
+
+
+@mixin input-normal{
+    display: block;
+    width: 100%;
+    border: 1px solid var(--gray-border);
+    border-radius: .7rem;
+    padding: .9rem 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--gray-text);
+    outline: none;
+    @include transition-medium;
+    &:focus{
+        outline: 1px solid var(--green-text);
+    }
+}
+
+@mixin bg-cover{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@mixin bg-contain{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
